@@ -26,7 +26,6 @@ user.email = "scott_chief@mars.org"
 
 db_sess = db_session.create_session()
 db_sess.add(user)
-db_sess.commit()
 
 user = User()
 user.surname = "Waters"
@@ -37,9 +36,7 @@ user.speciality = "mechanical"
 user.address = "module_2"
 user.email = "waters_mechanical@mars.org"
 
-db_sess = db_session.create_session()
 db_sess.add(user)
-db_sess.commit()
 
 user = User()
 user.surname = "Armstrong"
@@ -50,9 +47,7 @@ user.speciality = "spacecraft pilot"
 user.address = "module_3"
 user.email = "sylvia_pilot@mars.org"
 
-db_sess = db_session.create_session()
 db_sess.add(user)
-db_sess.commit()
 
 user = User()
 user.surname = "Johnson"
@@ -63,6 +58,14 @@ user.speciality = "astronomy scientist"
 user.address = "module_4"
 user.email = "johnson_scientist@mars.org"
 
-db_sess = db_session.create_session()
 db_sess.add(user)
+
+jobs = Jobs()
+jobs.team_leader = 1
+jobs.job = "deployment of residential modules 1 and 2"
+jobs.work_size = 15
+jobs.collaborators = "2, 3"
+jobs.is_finished = False
+
+db_sess.add(jobs)
 db_sess.commit()
